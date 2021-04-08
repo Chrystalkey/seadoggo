@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+e54538c29e28d0cfeed4d4164a6cd129 dependencies/cJSON-1.7.14/CMakeFiles/check
+dc87b9374c56ba656911bd7191d2835f dependencies/cJSON-1.7.14/CMakeFiles/uninstall_cjson
+663c7e0ffc1a2af325f9fa87c92e621b dependencies/curl-7.74.0/CMakeFiles/uninstall
+c618509869eb7388620d278456ca8094 dependencies/curl-7.74.0/src/tool_hugehelp.c

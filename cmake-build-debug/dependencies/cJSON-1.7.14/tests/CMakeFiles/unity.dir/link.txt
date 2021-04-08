@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\ar.exe qc libunity.a  CMakeFiles/unity.dir/unity/src/unity.c.obj
+D:\msys64\mingw64\bin\ranlib.exe libunity.a

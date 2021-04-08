@@ -1,0 +1,10 @@
+"C:\Program Files\JetBrains\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - MinGW Makefiles" F:\Developement\active\seadoggo
+-- curl version=[7.74.0]
+-- Could NOT find Perl (missing: PERL_EXECUTABLE) 
+-- Could NOT find LibSSH2 (missing: LIBSSH2_LIBRARY LIBSSH2_INCLUDE_DIR) 
+-- Enabled features: SSL IPv6 libz AsynchDNS alt-svc NTLM HTTPS-proxy
+-- Enabled protocols: HTTP HTTPS
+-- Enabled SSL backends: OpenSSL
+-- Configuring done
+-- Generating done
+-- Build files have been written to: F:/Developement/active/seadoggo/cmake-build-release

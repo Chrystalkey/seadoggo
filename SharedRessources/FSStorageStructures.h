@@ -1,0 +1,11 @@
+//
+// Created by Chrystalkey on 24.03.2021.
+//
+
+#ifndef SEADOGGO_FSSTORAGESTRUCTURES_H
+#define SEADOGGO_FSSTORAGESTRUCTURES_H
+
+
+
+
+#endif //SEADOGGO_FSSTORAGESTRUCTURES_H

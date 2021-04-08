@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2020.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" F:\Developement\active\seadoggo\dependencies\cJSON-1.7.14
+-- Configuring done
+-- Generating done
+-- Build files have been written to: F:/Developement/active/seadoggo/dependencies/cJSON-1.7.14/cmake-build-debug

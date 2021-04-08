@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\ar.exe qc libseadoggo_shared.a  CMakeFiles/seadoggo_shared.dir/configuration.cpp.obj CMakeFiles/seadoggo_shared.dir/fsmodel.cpp.obj CMakeFiles/seadoggo_shared.dir/jsonparser.cpp.obj CMakeFiles/seadoggo_shared.dir/SDHelpers.cpp.obj CMakeFiles/seadoggo_shared.dir/user.cpp.obj
+D:\msys64\mingw64\bin\ranlib.exe libseadoggo_shared.a
