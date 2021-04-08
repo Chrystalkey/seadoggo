@@ -475,25 +475,25 @@ dependencies/cJSON-1.7.14/CMakeFiles/cJSON_test.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/CMakeFiles/check.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cJSON_test.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/all
 dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/all
 dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir/all
 dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir/all
 dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cJSON_test.dir/all
 dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir/all
+dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/all
 dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir/all
-dependencies/cJSON-1.7.14/CMakeFiles/check.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\CMakeFiles\check.dir\build.make dependencies/cJSON-1.7.14/CMakeFiles/check.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\CMakeFiles\check.dir\build.make dependencies/cJSON-1.7.14/CMakeFiles/check.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num= "Built target check"
@@ -520,8 +520,8 @@ dependencies/cJSON-1.7.14/CMakeFiles/check.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_array.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_array.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=85 "Built target parse_array"
@@ -548,8 +548,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_array.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_object.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_object.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=93 "Built target print_object"
@@ -576,8 +576,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/print_object.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_examples.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_examples.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_examples.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=86 "Built target parse_examples"
@@ -631,8 +631,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_string.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_string.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=89 "Built target parse_string"
@@ -659,8 +659,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_string.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_number.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_number.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=87 "Built target parse_number"
@@ -687,8 +687,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_number.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_array.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_array.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=91 "Built target print_array"
@@ -715,8 +715,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/print_array.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_value.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_value.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num= "Built target parse_value"
@@ -743,8 +743,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_value.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_object.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_object.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=88 "Built target parse_object"
@@ -771,8 +771,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_object.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\compare_tests.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\compare_tests.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=4 "Built target compare_tests"
@@ -799,8 +799,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/compare_tests.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_hex4.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_hex4.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num= "Built target parse_hex4"
@@ -827,8 +827,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_hex4.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_string.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_string.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num= "Built target print_string"
@@ -855,8 +855,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/print_string.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_number.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_number.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=92 "Built target print_number"
@@ -883,8 +883,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/print_number.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_value.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\print_value.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=94 "Built target print_value"
@@ -911,8 +911,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/print_value.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\misc_tests.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\misc_tests.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=84 "Built target misc_tests"
@@ -939,8 +939,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/misc_tests.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_with_opts.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\parse_with_opts.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=90 "Built target parse_with_opts"
@@ -967,8 +967,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/parse_with_opts.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\cjson_add.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\cjson_add.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=2 "Built target cjson_add"
@@ -995,8 +995,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/cjson_add.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\readme_examples.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\readme_examples.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num=95 "Built target readme_examples"
@@ -1023,8 +1023,8 @@ dependencies/cJSON-1.7.14/tests/CMakeFiles/readme_examples.dir/clean:
 # Target rules for target dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir
 
 # All Build rule for target.
-dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir/all: dependencies/cJSON-1.7.14/CMakeFiles/cjson.dir/all
+dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir/all: dependencies/cJSON-1.7.14/tests/CMakeFiles/unity.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\minify_tests.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\cJSON-1.7.14\tests\CMakeFiles\minify_tests.dir\build.make dependencies/cJSON-1.7.14/tests/CMakeFiles/minify_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Developement\active\seadoggo\cmake-build-debug\CMakeFiles --progress-num= "Built target minify_tests"

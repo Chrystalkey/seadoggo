@@ -1,4 +1,5 @@
-==Seadoggo==
+## Seadoggo
+
 This project is an incremental backup system requiring minimal invasion on client systems.
 On the server this requires a http port on which the server can listen and a corresponding free port on the client for files to be sent.
 Furthermore a directory with read/write access on the server. This backup is a one-way street as of now, it is not meant for synchronizing.
