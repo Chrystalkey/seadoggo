@@ -130,4 +130,5 @@ dmypy.json
 
 
 #build dirs
-cmake-build*/
+#cmake-build*/
+.idea/

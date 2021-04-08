@@ -1,1 +1,0 @@
--IF:/Developement/active/seadoggo/Server/../dependencies/curl-7.74.0/include -IF:/Developement/active/seadoggo/Server/../SharedRessources -IF:/Developement/active/seadoggo/Server/../dependencies/libmicrohttpd-0.9.72-w32-bin/x86_64/MinGW/static/mingw64/include -IF:/Developement/active/seadoggo/dependencies/curl-7.74.0/include 
