@@ -13,25 +13,26 @@
 #include "SDDefinitions.h"
 
 class FSFile;
+
 class FSDir;
 
 class FSEntity {
 public:
-    [[nodiscard]] sptr<FSDir> parent() const { return _parent; }
+    sptr<FSDir> parent() const { return _parent; }
 
     virtual ~FSEntity() {}
 
-    [[nodiscard]] fs::path path() const { return _path; }
+    fs::path path() const { return _path; }
 
     void setFound() { found = true; }
 
     void resetFound() { found = false; }
 
-    [[nodiscard]] bool isFound() const { return found; }
+    bool isFound() const { return found; }
 
     virtual bool isDir() const = 0;
 
-    [[nodiscard]] bool isFile() const { return !isDir(); }
+    bool isFile() const { return !isDir(); }
 
 protected:
     explicit FSEntity(const std::wstring &path, const sptr<FSDir> &parent = nullptr) : _parent(parent), _path(path) {}
@@ -68,7 +69,7 @@ private:
 
 class FSDir : public FSEntity {
 public:
-    explicit FSDir(const std::wstring &path, const sptr<FSDir>& parent = nullptr) :
+    explicit FSDir(const std::wstring &path, const sptr<FSDir> &parent = nullptr) :
             FSEntity(path, parent) {}
 
     ~FSDir() {}
@@ -77,15 +78,15 @@ public:
 
     void addChild(const sptr<FSFile> &child) { _files.push_back(child); }
 
-    [[nodiscard]] const std::vector<sptr<FSDir>> &getChildDirectories() const { return child_directories; }
+    const std::vector<sptr<FSDir>> &getChildDirectories() const { return child_directories; }
 
-    [[nodiscard]] const std::vector<sptr<FSFile>> &getFiles() const { return _files; }
+    const std::vector<sptr<FSFile>> &getFiles() const { return _files; }
 
-    [[nodiscard]] size_t recFileCount() const { return child_files; }
+    std::size_t recFileCount() const { return child_files; }
 
-    [[nodiscard]] size_t recDirCount() const { return child_dirs; }
+    std::size_t recDirCount() const { return child_dirs; }
 
-    [[nodiscard]] bool isDir() const override { return true; };
+    bool isDir() const override { return true; };
 
     //static const FSEntityVector traverseFilesFirst(const FSDir* root);
     //static const FSEntityVector traverseDirsFirst(const FSDir* root);
@@ -97,8 +98,8 @@ private:
 private:
     std::vector<sptr<FSDir>> child_directories;
     std::vector<sptr<FSFile>> _files;
-    size_t child_files = 0;
-    size_t child_dirs = 0;
+    std::size_t child_files = 0;
+    std::size_t child_dirs = 0;
 
     friend class FSModel;
 };

@@ -7,13 +7,23 @@
 #include "commandocentral.h"
 #include "SDHelpers.h"
 
-CommandoCentral::CommandoCentral(int port) : port(port), storage(this) {
+CommandoCentral *CommandoCentral::only_central = nullptr;
+
+CommandoCentral CommandoCentral::init(uint16_t port) {
+    if (only_central != nullptr)
+        throw ::one_inst_error("ERROR: only one CommandoCentral Instance allowed");
+
+    return CommandoCentral(port);
+}
+
+CommandoCentral::CommandoCentral(uint16_t port) : port(port), storage(this) {
     daemon = MHD_start_daemon(MHD_USE_AUTO_INTERNAL_THREAD, port, nullptr, nullptr,
                               &CommandoCentral::answer_to_connection,
                               (void *) this, MHD_OPTION_END);
     if (daemon == nullptr)
         throw std::ios_base::failure("Daemon not started");
 
+    only_central = this;
     std::mt19937::result_type seed = rd() ^(
             (std::mt19937::result_type)
                     std::chrono::duration_cast<std::chrono::seconds>(
@@ -73,7 +83,7 @@ CommandoCentral::handle_post_requests(std::unordered_map<std::string, std::strin
         if (!args.contains("usertag")) {
             *http_resp_code = http_error(resp);
         } else {
-            uint16_t clref = setup_client(args.at("usertag"), std::string(upload_data, *upload_data_size));
+            uint16_t clref = step1_clientsetup(args.at("usertag"), std::string(upload_data, *upload_data_size));
             *http_resp_code = step2_OK(clref, resp);
         }
     } else if (args.at("client") != "0" && args.at("state") == "done") {
@@ -142,12 +152,12 @@ CommandoCentral::parse_header_args(const std::string &url) {
 }
 
 uint16_t
-CommandoCentral::setup_client(const std::string &usertag, const std::string &filelist) {
+CommandoCentral::step1_clientsetup(const std::string &usertag, const std::string &filelist) {
     ClientHandle handle;
     do {
         handle = random();
     } while (pool.contains(handle)
-             || handle == SEADOGGO_CLIENT_UNDEFINED
+             || handle == (uint16_t) SEADOGGO_CLIENT_UNDEFINED
              || handle == (uint16_t) SEADOGGO_CLIENT_INVALID);
 
     ClientReference ref;
@@ -231,4 +241,5 @@ CommandoCentral::set_requestfiles_for_client(ClientHandle handle, std::unordered
     if (!pool.contains(handle))
         return false;
     pool[handle].requested_files = std::move(requ_files);
+    return true;
 }

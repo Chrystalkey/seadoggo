@@ -76,3 +76,5 @@ std::time_t fromISOTime(const std::string &timestring) {
     iss >> std::get_time(&tm, "%F %T %Z");
     return std::mktime(&tm);
 }
+
+one_inst_error::one_inst_error(const std::string &arg) : runtime_error(arg) {}

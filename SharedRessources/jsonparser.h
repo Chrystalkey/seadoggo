@@ -31,12 +31,20 @@ public: // JSONParser REALLY is only a collection of static stuff.
     explicit JSONParser() = delete;
     JSONParser(const JSONParser &other) = delete;
     JSONParser operator=(const JSONParser &) = delete;
+    JSONParser operator=(JSONParser &) = delete;
+    JSONParser operator=(const JSONParser &&)= delete;
+    JSONParser operator=(JSONParser &&)= delete;
 public: // parse it to strings, OHHH YEAH BABY!!
     static std::string parseToJSON(const DiffStateMap& dsm);
     static std::string parseToJSON(const FSEntityStateMap& esm);
     static std::string parseToJSON(const FSTree& tree);
     static std::string parseToJSON(const FSEntityVector &vec);
+
+    template<typename T>
+    static std::string parseToJSON(const T &);
 private: // helper for the stringification
+    static cJSON *cj_parseToJSON(const fs::path &p){return cj_parseToJSON(p.string());}
+    static cJSON *cj_parseToJSON(const std::string &str){return cJSON_CreateString(str.c_str());}
     static cJSON *cj_parseToJSON_rec(const sptr<const FSDir> &entity);
     template<class K, class V>
     static cJSON *cj_parseToJSON(const std::map<K,V> mapping);

@@ -18,11 +18,11 @@ class Configuration {
 public:
     explicit Configuration(const fs::path &path);
 
-    std::unordered_map<std::wstring, SeaDoggo::User>*getConfiguration(){
-        return &configuration;
+    wptr<std::unordered_map<std::string, SeaDoggo::User>> getConfiguration(){
+        return configuration;
     };
-    const std::unordered_map<std::wstring, SeaDoggo::User> *getConfiguration() const{
-        return &configuration;
+    const sptr<std::unordered_map<std::string, SeaDoggo::User>> getConfiguration() const{
+        return configuration;
     }
     SeaDoggo::LogLevel getLogLevel() const{
         return logLevel;
@@ -32,7 +32,7 @@ public:
 
 private:
     SeaDoggo::LogLevel logLevel;
-    std::unordered_map<std::wstring, SeaDoggo::User> configuration;
+    sptr<std::unordered_map<std::string, SeaDoggo::User>> configuration;
 
     static bool isValidUserConfig(const SeaDoggo::User &config);
     static void resetUserConfig(SeaDoggo::User *config);

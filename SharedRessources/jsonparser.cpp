@@ -7,6 +7,14 @@
 
 #include "fsmodel.h"
 
+template<typename T>
+std::string JSONParser::parseToJSON(const T &sth) {
+    cJSON *master = cj_parseToJSON(sth);
+    std::string krams = cJSON_Print(master);
+    cJSON_Delete(master);
+    return krams;
+}
+
 std::pair<std::string, cJSON *> JSONParser::parseHead(const std::wstring &json) {
     cJSON *cjson = cJSON_Parse(toString(json).c_str());
     if (cjson == nullptr)

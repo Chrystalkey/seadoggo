@@ -27,4 +27,9 @@ std::time_t fromISOTime(const std::string &);
 
 std::string now_time();
 
+class one_inst_error : public std::runtime_error{
+public:
+    one_inst_error(const std::string &arg);
+};
+
 #endif //SEADOGGO_SDHELPERS_H

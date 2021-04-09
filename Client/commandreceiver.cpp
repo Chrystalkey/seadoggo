@@ -14,7 +14,7 @@ CommandReceiver::CommandReceiver(const std::string &host, const std::string &use
                                                                                                        userpwd(userpwd),
                                                                                                        port(port) {
     if (onlyReceiver != nullptr)
-        throw std::runtime_error("Only one Instance allowed");
+        throw ::one_inst_error("Only one Instance allowed");
     curl_global_init(CURL_GLOBAL_ALL);
     CommandReceiver::onlyReceiver = this;
 }

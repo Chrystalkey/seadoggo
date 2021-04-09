@@ -7,10 +7,12 @@
 // a class that models the tree-structure of the file tree that is watched.
 // TODO: perform diffs/update FSEntity by path/
 
-#include "fsentity.h"
 #include <map>
 #include <list>
 #include <ostream>
+#include <unordered_set>
+
+#include "fsentity.h"
 #include "SDDefinitions.h"
 
 namespace SeaDoggo{
@@ -90,17 +92,25 @@ typedef std::vector< sptr< const FSEntity>> FSEntityVector;
 typedef sptr<FSDir> FSTree;
 
 /**
+ * typedef std::unordered_map<std::string, std::time_t> Filelisting;
+ */
+typedef std::unordered_map<std::string, std::time_t> Filelisting;
+
+/**
  * Model a Set of files for comparison with a corresponding set of files.
  */
 class FSModel {
 public:
     explicit FSModel() {}
+    explicit FSModel(const fs::path &root){discoverFSStructure(root);}
 
     /**
      * Pass an argument into this function to fill the model with data. reapply when needed.
      * @param root the root directories absolute path
      */
     void discoverFSStructure(const fs::path &root);
+
+    void createFSStructure(const std::string &source);
 
     /**
      * pass on another FSModel to compare it to, get the result in a FSEntityStateMap in return.
@@ -118,7 +128,7 @@ public:
      * return the root directoriy as a FSEntity
      * @return
      */
-    [[nodiscard]] const FSTree &getRoot() const { return root; }
+    const FSTree &getRoot() const { return root; }
 
     /**
      * translate the FSEntityStateMap into the opposite form for the "other" model.
@@ -188,6 +198,16 @@ private:
      * @param parent the parent Directory Entity
      */
     void discoverFSStructure(const sptr<FSDir> &parent);
+
+    /**
+     * insert the path specified by "segments" into the tree starting at root. recursively of course.
+     *
+     * @param segments the path to be inserted
+     * @param parent the parent directory of the subpath
+     * @param mtime the mtime of the file. nullptr if it is a directory
+     * @param index the index in the "segments" vector we are at
+     */
+    void insert_into_tree(const std::vector<std::string> &segments, sptr<FSDir> parent, const std::time_t *mtime, std::size_t index = 0);
 
     /**
      * internal method containing the algorithm for finding the difference between two file trees

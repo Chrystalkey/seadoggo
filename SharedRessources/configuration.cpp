@@ -14,7 +14,8 @@ std::wstring toUpperCase(const std::wstring &randomstuff){
     return newOne;
 }
 
-Configuration::Configuration(const fs::path &path) {
+Configuration::Configuration(const fs::path &path)
+    : configuration(std::make_shared<std::unordered_map<std::string, SeaDoggo::User>>()) {
     std::wifstream file(path);
     if(!file.is_open()){
         perror("Error open");
@@ -53,7 +54,7 @@ Configuration::Configuration(const fs::path &path) {
 
 void Configuration::reset_configuration() {
     logLevel = SeaDoggo::LogLevel::Debug;
-    configuration.clear();
+    configuration->clear();
 }
 
 bool Configuration::isValidUserConfig(const SeaDoggo::User &config) {
@@ -90,7 +91,7 @@ bool Configuration::pre_user_config(const std::wstring& argument) {
 bool Configuration::user_config_one(const std::wstring &argument, SeaDoggo::User *current_config) {
     if(argument.starts_with(L'[')){ // a new user
         if(current_config->isValid())
-            configuration.emplace(current_config->getName(), *current_config);
+            configuration->emplace(toString(current_config->getName()), *current_config);
         current_config->clear();
 
         std::wstring temporaryUsername;

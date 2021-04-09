@@ -5,6 +5,7 @@
 #include "fsmodel.h"
 #include "SDHelpers.h"
 #include <map>
+
 /*
 const FSEntityVector FSDir::traverseFilesFirst(const FSDir *root) {
     auto x = internalTravFilesFirst(root);
@@ -68,9 +69,29 @@ void FSModel::discoverFSStructure(const fs::path &root_dir) {
     discoverFSStructure(root);
 }
 
+void FSModel::createFSStructure(const std::string &source) {
+    root.reset();
+    //TODO: wtf do I want source to be? JSON? a list with line breaks? what???
+}
+
+void FSModel::insert_into_tree(const std::vector<std::string> &segments, sptr<FSDir> parent, const std::time_t *mtime,
+                               std::size_t index) {
+    if (index >= segments.size())
+        return;
+    if (index == segments.size() - 1 && mtime != nullptr) { // if its a file and we are at the last segment
+        parent->addChild(
+                std::make_shared<FSFile>(toWString(segments[index]), chrf::from_sys(chrs::from_time_t(*mtime)),
+                                         parent));
+        return;
+    }
+    auto child = std::make_shared<FSDir>(toWString(segments[index]),parent);
+    parent->addChild(child);
+    insert_into_tree(segments,child,mtime,index+1);
+}
+
 FSEntityStateMap FSModel::performDiff(FSModel &other) {
     FSEntityStateMap stateMap;
-    if(other.root == nullptr ||this->root == nullptr)
+    if (other.root == nullptr || this->root == nullptr)
         return stateMap;
     _recursiveDifference(root, other.root, &stateMap,
                          root->path(), other.root->path());
@@ -104,7 +125,7 @@ void FSModel::_recursiveDifference(sptr<FSDir> one, sptr<FSDir> two, FSEntitySta
         }
         for (auto &dir: *onedirs) {
             differences->emplace(dir, SeaDoggo::DiffStates::dirMissingOther);
-            _recursiveDifference(dir ,nullptr, differences, baseOne, baseTwo);
+            _recursiveDifference(dir, nullptr, differences, baseOne, baseTwo);
         }
         return;
     }
@@ -113,10 +134,10 @@ void FSModel::_recursiveDifference(sptr<FSDir> one, sptr<FSDir> two, FSEntitySta
     auto *twofiles = &(two->_files);
     auto *twodirs = &(two->child_directories);
     //for (auto otherit = twofiles->begin(); otherit != twofiles->end(); otherit++) {
-    for(auto &twoElement : *twofiles){
+    for (auto &twoElement : *twofiles) {
         bool matchFound = false;
         //for (auto thisit = onefiles->begin(); thisit != onefiles->end(); thisit++) {
-        for(auto &oneElement : *onefiles){
+        for (auto &oneElement : *onefiles) {
             if (twoElement->path().lexically_relative(baseTwo).compare(
                     oneElement->path().lexically_relative(baseOne)
             ) == 0) {
@@ -139,7 +160,7 @@ void FSModel::_recursiveDifference(sptr<FSDir> one, sptr<FSDir> two, FSEntitySta
     }
 
     //for (auto thisit = onefiles->begin(); thisit != onefiles->end(); thisit++) {
-    for(auto &oneElement : *onefiles){
+    for (auto &oneElement : *onefiles) {
         if (!oneElement->isFound())
             differences->emplace(oneElement, SeaDoggo::DiffStates::fileMissingOther);
         oneElement->resetFound();
@@ -147,10 +168,10 @@ void FSModel::_recursiveDifference(sptr<FSDir> one, sptr<FSDir> two, FSEntitySta
 
     // directories
     //for (auto otherit = twodirs->begin(); otherit != twodirs->end(); otherit++) {
-    for(auto &twoElement : *twodirs){
+    for (auto &twoElement : *twodirs) {
         bool matchFound = false;
         //for (auto thisit = onedirs->begin(); thisit != onedirs->end(); thisit++) {
-        for(auto &oneElement : *onedirs){
+        for (auto &oneElement : *onedirs) {
             if (twoElement->path().lexically_relative(baseTwo).compare(
                     oneElement->path().lexically_relative(baseOne)
             ) == 0) {
@@ -167,7 +188,7 @@ void FSModel::_recursiveDifference(sptr<FSDir> one, sptr<FSDir> two, FSEntitySta
     }
 
     //for (auto thisit = onedirs->begin(); thisit != onedirs->end(); thisit++) {
-    for(auto &oneElement : *onedirs){
+    for (auto &oneElement : *onedirs) {
         if (!oneElement->isFound()) {
             differences->emplace(oneElement, SeaDoggo::DiffStates::dirMissingOther);
             _recursiveDifference(oneElement, nullptr, differences, baseOne, baseTwo);

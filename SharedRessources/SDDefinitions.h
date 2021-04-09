@@ -17,7 +17,6 @@
 #define SEADOGGO_CLIENT_UNDEFINED 0
 #define SEADOGGO_CLIENT_INVALID -1
 
-namespace fs = std::filesystem;
 typedef uint16_t HttpResponseCode;
 typedef uint16_t ClientHandle;
 
@@ -29,4 +28,6 @@ template<typename T>
 using wptr = std::weak_ptr<T>;
 
 namespace fs = std::filesystem;
+using chrs = std::chrono::system_clock;
+using chrf = std::chrono::file_clock;
 #endif //SEADOGGO_SDDEFINITIONS_H

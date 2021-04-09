@@ -68,8 +68,8 @@ public:
         stage = BACKUP_CANCELLED;
         return true;
     }
-    template<typename _Tp>
 
+    template<typename _Tp>
     using not_same = std::__not_<std::is_same<std::__remove_cvref_t<_Tp>, std::thread>>;
     template<typename _Callable, typename... _Args,
     typename = std::_Require<not_same<_Callable>>>

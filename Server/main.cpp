@@ -6,7 +6,7 @@
 #include "commandocentral.h"
 
 int main(int argc, char **argv){
-    CommandoCentral cc(PORT);
+    CommandoCentral cc = CommandoCentral::init(PORT);
     cc.run();
     return 0;
 }
